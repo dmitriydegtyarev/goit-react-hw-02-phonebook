@@ -2,6 +2,8 @@
 import { Component } from 'react';
 import { v4 as uuid } from 'uuid';
 
+import { Form } from './ContactForm.styled';
+
 const INITIAL_STATE = {
   name: '',
   number: '',
@@ -39,7 +41,7 @@ export class ContactForm extends Component {
   render() {
     const { name, number } = this.state;
     return (
-      <form onSubmit={this.handleFormSubmit}>
+      <Form onSubmit={this.handleFormSubmit}>
         <label>
           Name
           <input
@@ -67,7 +69,7 @@ export class ContactForm extends Component {
           />
         </label>
         <button type="submit">Add contact</button>
-      </form>
+      </Form>
     );
   }
 }

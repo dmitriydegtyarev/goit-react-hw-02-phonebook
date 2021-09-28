@@ -1,9 +1,15 @@
 import styled from '@emotion/styled';
 
+import bgImage from 'images/bgImage.jpg';
+
 export const Container = styled.div`
-  max-width: 1170px;
+  height: 100vh;
+  max-width: 100vw;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 40px;
+  background-image: url(' ${bgImage} ');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 `;

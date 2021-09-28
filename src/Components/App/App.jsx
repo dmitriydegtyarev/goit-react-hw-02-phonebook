@@ -1,5 +1,6 @@
 import { Component } from 'react';
 
+import { PageTitle } from 'Components/Title';
 import { ContactForm } from 'Components/ContactForm';
 import { Filter } from 'Components/Filter';
 import { ContactsList } from 'Components/ContactList';
@@ -49,12 +50,12 @@ export class App extends Component {
     const visibleContacts = this.getVisibleContacts();
     return (
       <>
-        <h2>Phonebook</h2>
+        <PageTitle title="Phonebook" />
         <ContactForm
           onAdd={this.handleAddContact}
           onCheckUnique={this.handleCheckUniqueContact}
         />
-        <h2>Contacts List</h2>
+        <PageTitle title="Contacts List" />
         <Filter filter={filter} onChange={this.handleFilterChange} />
         <ContactsList
           contacts={visibleContacts}
